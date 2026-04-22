@@ -9,6 +9,7 @@
   <title>Lankalapalli Guna | Problem Solver</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/profileimg.png" fetchpriority="high">
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet">
@@ -44,7 +45,8 @@
       </div>
 
       <figure class="hero-portrait fade-in delay-1">
-        <img src="assets/profileimg.png" alt="Portrait of Lankalapalli Guna">
+        <img src="assets/profileimg.png" alt="Portrait of Lankalapalli Guna" loading="eager" fetchpriority="high"
+          decoding="async">
       </figure>
     </section>
 
@@ -107,7 +109,7 @@
       </div>
       <div class="project-grid">
         <article class="project-card">
-          <img src="assets/grocery.webp" alt="Grocery delivery dashboard preview">
+          <img src="assets/grocery.webp" alt="Grocery delivery dashboard preview" loading="lazy" decoding="async">
           <div class="project-content">
             <p class="project-kicker">Full-stack e-commerce platform</p>
             <h3>Grocery Delivery App</h3>
@@ -123,7 +125,7 @@
         </article>
 
         <article class="project-card project-card-offset">
-          <img src="assets/quickchat.jpg" alt="Real-time chat interface preview">
+          <img src="assets/quickchat.jpg" alt="Real-time chat interface preview" loading="lazy" decoding="async">
           <div class="project-content">
             <p class="project-kicker">Real-time messaging platform</p>
             <h3>QuickChat Messaging Platform</h3>
@@ -189,15 +191,16 @@
 
         <div class="cp-images">
           <figure>
-            <img src="assets/heatmap.png" alt="LeetCode heatmap screenshot">
+            <img src="assets/heatmap.png" alt="LeetCode heatmap screenshot" loading="lazy" decoding="async">
             <figcaption>Heatmap</figcaption>
           </figure>
           <figure>
-            <img src="assets/ratings.png" alt="LeetCode rating screenshot">
+            <img src="assets/ratings.png" alt="LeetCode rating screenshot" loading="lazy" decoding="async">
             <figcaption>Rating</figcaption>
           </figure>
           <figure>
-            <img src="assets/badges.png" alt="Competitive programming badges screenshot">
+            <img src="assets/badges.png" alt="Competitive programming badges screenshot" loading="lazy"
+              decoding="async">
             <figcaption>Badges</figcaption>
           </figure>
         </div>
@@ -220,8 +223,7 @@
     <button class="image-modal__close" type="button" aria-label="Close image preview">&times;</button>
     <img class="image-modal__image" src="" alt="">
   </div>
-  <script src="scripts.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
-
