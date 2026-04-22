@@ -574,3 +574,60 @@ h3 {
     padding: 64px 0;
   }
 }
+
+.cp-images img {
+  cursor: zoom-in;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.82);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.image-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.image-modal__image {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 1120px);
+  max-height: 86vh;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.image-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(18, 22, 23, 0.88);
+  font: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.image-modal__close:hover {
+  border-color: rgba(99, 230, 190, 0.46);
+  transform: scale(1.04);
+}
